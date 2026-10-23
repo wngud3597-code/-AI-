@@ -1,0 +1,11 @@
+import { build } from 'esbuild';
+import { mkdir } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
+import { resolve } from 'node:path';
+const name = process.argv[2];
+if (!['benchmark', 'replay'].includes(name)) throw new Error('Unknown tool');
+await mkdir('dist/tools', { recursive: true });
+await build({ entryPoints: [`scripts/${name}.ts`], bundle: true, platform: 'node', format: 'esm', target: 'node22', outfile: `dist/tools/${name}.mjs` });
+process.argv.splice(2, 1);
+const tool = await import(pathToFileURL(resolve(`dist/tools/${name}.mjs`)).href);
+if (typeof tool.main === 'function') await tool.main();

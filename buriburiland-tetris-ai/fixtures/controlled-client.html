@@ -1,0 +1,51 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>테트리스 AI · 로컬 제어 검증</title>
+<style>
+body{margin:0;background:#08111f;color:#e8f1ff;font:15px system-ui}h1,p{margin:14px 24px}.tetris-root{width:780px;margin:20px auto}.tetris-header{height:45px}.tetris-stage{display:grid;grid-template-columns:150px 300px 150px;gap:24px}.tetris-board-panel{position:relative}.tetris-playfield{width:300px;height:660px;position:relative;background:#050b14;outline:1px solid #6598b1}.tetris-spawn-area{height:60px}.tetris-visible-board{position:absolute;top:60px;width:300px;height:600px}.tetris-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:repeat(20,1fr)}.tetris-cell{box-sizing:border-box;border:1px solid #162439}.is-filled{background:var(--cell-color,#64748b)}.tetris-piece-layer{position:absolute;inset:0;pointer-events:none}.tetris-layer-cell{position:absolute;width:10%;height:5%}.tetris-next{display:grid;grid-template-columns:repeat(var(--preview-cols,4),22px);grid-auto-rows:22px;margin:12px 0}.tetris-hold-card{background:transparent;color:white;padding:8px;border:1px solid #6598b1;min-width:120px}.tetris-card{padding:10px;border:1px solid #293d50;margin-top:10px}.tetris-card span{display:block}.tetris-mobile-controls{grid-column:1/4}.tetris-mobile-controls button{padding:8px 14px}.tetris-next-list{border:1px solid #6598b1;padding:8px}.tetris-pause-overlay{position:absolute;inset:0;display:grid;place-items:center;background:#000b;font-size:32px}input{padding:8px}a{color:#71d8da}
+</style>
+<h1>로컬 제어 검증</h1><p>공개 클라이언트 물리 코드를 사용한 합성 연습 환경입니다. 실제 사이트·서버·대전 검증 결과가 아닙니다.</p>
+<main class="tetris-root"><header class="tetris-header"><div class="tetris-status">속도 LV.1</div></header><section class="tetris-stage is-solo-view"></section></main>
+<p><input id="chat" placeholder="포커스 중지 검증"><button id="pause-fixture">일시정지 전환</button></p>
+<script>
+(() => {
+  const C = window.__client;
+  if (!C) throw new Error('공개 클라이언트 검증 helper를 먼저 주입해야 합니다. npm run test:browser로 실행하세요.');
+  const stage = document.querySelector('.tetris-stage');
+  let seed = 19273, bag = [], paused = false, ended = false, rotationAt = -Infinity;
+  const pressed = new Set();
+  const random = () => { seed = (Math.imul(seed,1664525) + 1013904223) >>> 0; return seed/4294967296; };
+  function next() { if (!bag.length) { bag = ['I','O','T','S','Z','J','L']; for(let i=6;i>0;i--){const j=Math.floor(random()*(i+1));[bag[i],bag[j]]=[bag[j],bag[i]];} } return bag.shift(); }
+  const state = {board:Array.from({length:20},()=>Array(10).fill(0)), current:null, hold:null, canHold:true, next:Array.from({length:5},next), lines:0, locks:0};
+  state.current = C.spawn(next(), state.board);
+  const events = [];
+  function preview(type, compact=false) {
+    const shape=C.shape({type,rotation:0}), cols=compact?shape[0].length:4, rows=compact?shape.length:4;
+    return `<div class="tetris-next ${compact?'tetris-hold-preview':'tetris-queue-preview'}" style="--preview-cols:${cols}">${Array.from({length:rows*cols},(_,i)=>{const v=shape[Math.floor(i/cols)]?.[i%cols]||0;return `<div class="tetris-cell${v?' is-filled':''}" style="--cell-color:${C.colors[v]}"></div>`;}).join('')}</div>`;
+  }
+  function render() {
+    document.querySelector('.tetris-status').textContent = ended?'게임 종료':paused?'일시정지':'속도 LV.1';
+    const p=state.current;
+    stage.innerHTML=`<aside class="tetris-left-panel"><div class="tetris-stack"><button class="tetris-hold-card" ${paused||ended||!state.canHold?'disabled':''}>${state.hold?preview(state.hold,true):'<strong>EMPTY</strong>'}</button></div><div class="tetris-metrics"><div class="tetris-card"><span>제거 줄</span><strong>${state.lines}</strong></div><div class="tetris-card"><span>상태</span><strong>${ended?'탈락':'생존'}</strong></div></div></aside><section class="tetris-board-panel"><div class="tetris-board-wrap"><div class="tetris-playfield tetris-board has-spawn-area"><div class="tetris-spawn-area"></div><div class="tetris-visible-board"><div class="tetris-grid">${state.board.flatMap(row=>row.map(v=>`<div class="tetris-cell${v?' is-filled':''}" style="--cell-color:${C.colors[v]}"></div>`)).join('')}</div>${p?`<div class="tetris-piece-layer" data-piece-type="${p.type}" style="transform:translate3d(${p.x*10}%,${p.y*5}%,0)">${C.shape(p).flatMap((row,y)=>row.flatMap((v,x)=>v?[`<div class="tetris-cell tetris-layer-cell is-filled" style="left:${x*10}%;top:${y*5}%;--cell-color:${C.colors[v]}"></div>`]:[])).join('')}</div>`:''}</div></div></div>${paused?'<div class="tetris-pause-overlay">일시정지</div>':''}</section><aside class="tetris-right-panel"><div class="tetris-next-list">${state.next.map(t=>preview(t)).join('')}</div></aside><div class="tetris-mobile-controls"><div class="tetris-mobile-move-group"><button ${paused||ended?'disabled':''}>왼쪽</button><button ${paused||ended?'disabled':''}>아래</button><button ${paused||ended?'disabled':''}>오른쪽</button></div></div>`;
+  }
+  window.addEventListener('keydown',e=>{
+    const action=C.key(e.key,e.code); if(!action)return;
+    events.push({type:'keydown',action,at:performance.now()});
+    if(paused||ended||/INPUT|TEXTAREA/.test(document.activeElement?.tagName)||pressed.has(action))return;
+    pressed.add(action); e.preventDefault();
+    if(action.startsWith('rotate')){if(performance.now()-rotationAt<30)return;rotationAt=performance.now();}
+    if(action==='hard_drop'){
+      const locked=C.lock(state.board,C.drop(state.board,state.current));
+      if(!locked){ended=true;render();return;}
+      state.board=locked.board;state.lines+=locked.lines;state.locks++;state.current=C.spawn(state.next.shift(),state.board);state.next.push(next());state.canHold=true;
+      if(!state.current)ended=true;
+    }else if(action==='hold'){
+      if(!state.canHold)return;
+      const replacement=state.hold??state.next.shift();if(!state.hold)state.next.push(next());state.hold=state.current.type;state.current=C.spawn(replacement,state.board);state.canHold=false;
+    }else state.current=C.apply(action,state.board,state.current);
+    render();
+  });
+  window.addEventListener('keyup',e=>{const action=C.key(e.key,e.code);if(action){events.push({type:'keyup',action,at:performance.now()});pressed.delete(action);}});
+  document.querySelector('#pause-fixture').onclick=()=>{paused=!paused;render();};
+  window.fixture={state,events,render,setPaused(value){paused=value;render();},insertGarbage(holes){state.board=state.board.slice(holes.length).concat(holes.map(h=>Array.from({length:10},(_,x)=>x===h?0:8)));render();}};
+  render();
+})();
+</script></html>

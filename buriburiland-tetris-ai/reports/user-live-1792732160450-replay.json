@@ -1,0 +1,32 @@
+{
+  "source": "tetris-evidence-1792732160450.jsonl",
+  "evidence": "user-provided-public-dom-records",
+  "exitCode": 0,
+  "records": 1000,
+  "counts": {
+    "display-consistent": 643,
+    "hold-consistent": 197,
+    "interrupted-replan": 150,
+    "observed-rise-consistent": 8,
+    "incomplete": 1,
+    "cancelled": 1
+  },
+  "limitations": [
+    "Recomputed from copied before state and executed inputs; stored plan.expectedBoard ignored",
+    "Action timestamps are checked but gravity/lock-delay evolution is not simulated",
+    "Unknown attacks, spin, cancellation and external garbage are not scored as matches",
+    "Observed-rise consistency checks later display evidence; it is not a predicted full-board or server-order match",
+    "Interrupted replans, including HOLD recovery, are excluded from completed-lock and clear accuracy",
+    "A display-consistent record does not establish authoritative server fidelity"
+  ],
+  "exceptions": [
+    {
+      "line": 218,
+      "status": "incomplete",
+      "board": "unknown",
+      "clear": "unknown",
+      "reason": "Failure or missing after observation; no completed-lock validation",
+      "synthetic": false
+    }
+  ]
+}

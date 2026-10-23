@@ -1,0 +1,45 @@
+You are taking ownership of the BuriburiLand Competitive Tetris AI repository.
+
+Read AGENTS.md and every file under docs/ before making architectural decisions. Inspect current/buriburiland_tetris_ai_FINAL_v4.user.js if it exists.
+
+IMPORTANT: Do NOT immediately generate FINAL v5 or another giant userscript. The current code is only a baseline and may contain incorrect assumptions.
+
+Your first objective is NOT stronger gameplay. Your first objective is to make the simulator observable, testable, and verifiably consistent with the actual BuriburiLand engine.
+
+PHASE A — Repository audit
+- inspect the current userscript
+- identify structural defects and risky assumptions
+- rank them by severity
+- investigate stale React state, board parsing, tetromino geometry, SRS/reachability, HOLD, line clear prediction, garbage cancellation/insertion, Spin detection, keyboard input, main-thread blocking, strategy oscillation, and predicted-vs-actual divergence
+
+PHASE B — Architecture
+Create/refine modular architecture for GameAdapter, PhysicsEngine, SRSEngine, GarbageEngine, ReachableMoveGenerator, Evaluator, SearchEngine, StrategyManager, Executor, Telemetry, PredictionValidator, ReplayHarness, Worker, RegressionTests. Do not keep the development code in one giant userscript.
+
+PHASE C — Tooling
+Set up an appropriate Node project. Prefer Vitest unless there is a concrete reason not to. Add scripts for test, test:watch, regression, benchmark, build. Use TypeScript if it materially improves correctness.
+
+PHASE D — Telemetry + Prediction Validator
+Implement telemetry before competitive strategy improvements. Every locked piece must record actual before state, decision, predicted after state, actual after state, and validation diff. At minimum compare board, clear, attack, spin, pendingGarbage, combo, backToBack. Log JSONL where practical. If prediction diverges, retain evidence and downgrade aggressive strategy.
+
+PHASE E — Physics tests
+Add deterministic tests for all seven tetrominoes, rotations, SRS kicks, walls, floor, collisions, hard drop, line clears, HOLD, and reachable placements.
+
+Only after prediction fidelity is demonstrably strong should you move on to garbage and versus AI.
+
+Working style:
+- do not ask for approval for routine safe local edits/tests
+- make changes, run tests, inspect results, fix failures
+- before strategy rewrites, explain evidence
+- never treat more code as evidence of a better AI
+- never claim the AI is final or human-beating without measured evidence
+
+Your first response should include:
+1. concise repository audit
+2. top structural risks
+3. proposed directory architecture
+4. validation strategy
+5. what you implemented in Phase A–D
+6. tests run and results
+7. what remains unverified
+
+Then continue implementing Phase A–D rather than stopping after a plan.

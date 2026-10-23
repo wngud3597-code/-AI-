@@ -1,0 +1,29 @@
+buriburiland_tetris_ai_codex_project/
+├─ AGENTS.md
+├─ package.json / package-lock.json
+├─ tsconfig.json / tsconfig.build.json / vitest.config.ts
+├─ README.md
+├─ CODEX_FIRST_PROMPT.txt
+├─ current/
+│  └─ buriburiland_tetris_ai_FINAL_v4.user.js
+├─ docs/
+│  ├─ AUDIT_PHASE_A.md
+│  ├─ ARCHITECTURE.md
+│  ├─ IMPLEMENTATION_STATUS.md
+│  ├─ PROJECT_GOAL.md
+│  ├─ KNOWN_GAME_STATE.md
+│  ├─ KNOWN_FAILURES.md
+│  ├─ VALIDATION_PROTOCOL.md
+│  └─ RESEARCH_TARGETS.md
+├─ src/
+│  ├─ adapter/ physics/ garbage/ move/
+│  ├─ evaluation/ search/ strategy/ executor/
+│  └─ telemetry/ replay/ worker/ userscript/
+├─ tests/
+│  ├─ adapter/ physics/ move/ telemetry/ executor/
+│  ├─ regression/
+│  └─ benchmarks/
+├─ logs/
+├─ screenshots/
+├─ replays/
+└─ dist/

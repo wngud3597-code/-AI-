@@ -1,0 +1,1522 @@
+{
+  "version": "0.2.3",
+  "verifiedAt": "2026-10-23T03:59:42.482Z",
+  "timezone": "Asia/Seoul",
+  "provenance": {
+    "upstreamCommit": "e7fdbc1420972a7f8b43b4704820f989dec742d5",
+    "acquisition": "GitHub connector text snapshot; git clone failed",
+    "downloadedTextFiles": 61,
+    "skippedImages": 2,
+    "localGitHead": null,
+    "baselineV4GitBlob": "95a7398743ee3406efefd29950f67642fb9bf548"
+  },
+  "codeSha256": "6285adea1e7bb1772dfa7b52026123e708e669bc82125997ff5110468c0e9f11",
+  "artifacts": {
+    "tetris-ai.user.js": {
+      "bytes": 90534,
+      "sha256": "fad0a56add17752ae15422368448b9a59115a7a192cab384a9bd2a34a76f0781"
+    },
+    "tetris-ai.worker.js": {
+      "bytes": 22699,
+      "sha256": "b8e71d342c6b030aec45bd8b8453338058398ae91cc98f1ccfbd976da79533e9"
+    }
+  },
+  "environment": {
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "arch": "x64",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz",
+    "logicalCPUs": 16,
+    "memoryGiB": 32,
+    "node": "v24.18.0"
+  },
+  "commands": {
+    "npm.cmd ci --ignore-scripts": "passed in initial setup; not repeated after @types/node addition",
+    "npm.cmd install --save-dev --save-exact @types/node --ignore-scripts": "passed; installation audit reported zero vulnerabilities",
+    "npm.cmd run build": "passed",
+    "npm.cmd test": {
+      "status": "passed",
+      "tests": 321,
+      "passed": 321,
+      "files": 19,
+      "source": "reports/unit-tests.json"
+    },
+    "npm.cmd run typecheck": "passed",
+    "npm.cmd run verify:source": "passed; original comparison retained, physics unchanged",
+    "npm.cmd run test:browser": "passed",
+    "npm.cmd run test:garbage": "passed",
+    "npm.cmd run benchmark": "initial smoke retained; strategy unchanged",
+    "npm.cmd run replay -- reports/garbage-*.jsonl": "passed individually; see garbage-replay-summary.json",
+    "npm.cmd run replay -- reports/browser-evidence.jsonl": "passed; includes paths revalidated after gravity",
+    "local installer": {
+      "url": "http://127.0.0.1:8765/tetris-ai.user.js",
+      "httpStatus": 200,
+      "version": "0.2.3",
+      "bytes": 90534,
+      "sha256": "fad0a56add17752ae15422368448b9a59115a7a192cab384a9bd2a34a76f0781",
+      "checkedAt": "2026-10-23T03:59:41.821Z"
+    }
+  },
+  "clientSource": {
+    "sha256": "223960D0C6DD0E4E5F3E8C421B12FF9DB504CF0EF0FD4E248E873D50C4DF6538",
+    "comparisons": {
+      "shape": {
+        "compared": 28,
+        "matched": 28,
+        "mismatched": 0
+      },
+      "spawn": {
+        "compared": 707,
+        "matched": 707,
+        "mismatched": 0
+      },
+      "collision": {
+        "compared": 248864,
+        "matched": 248864,
+        "mismatched": 0
+      },
+      "move_left": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "move_right": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "soft_drop": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "rotate_cw": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "rotate_ccw": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "hard_drop": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "lock": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "hard_drop_lock": {
+        "compared": 71935,
+        "matched": 71935,
+        "mismatched": 0
+      },
+      "key_mapping": {
+        "compared": 8,
+        "matched": 8,
+        "mismatched": 0
+      },
+      "piece_colors": {
+        "compared": 1,
+        "matched": 1,
+        "mismatched": 0
+      }
+    },
+    "excluded": [
+      "180-degree rotation is disabled in runtime",
+      "server reconciliation",
+      "spin",
+      "attack",
+      "garbage insertion/cancellation timing",
+      "live play"
+    ]
+  },
+  "browser": {
+    "environment": "local Chrome fixture using public client helpers; no site/server/Tampermonkey claim",
+    "checks": {
+      "idleBlurPreservesStatus": true,
+      "dom": true,
+      "scriptVersion": "0.2.3",
+      "inspectionReadiness": true,
+      "idleBlurPreservesInspection": true,
+      "environmentPreservesStartupError": true,
+      "f8CancelsSpawnObservation": true,
+      "shadowZeroInputs": true,
+      "spawnTransitionRecovers": true,
+      "continuousLocks": 20,
+      "f8NoFurtherKeydowns": true,
+      "gravitySearchRequests": 5,
+      "gravitySearchDrops": 5,
+      "gravityVerifiedPlacements": 3,
+      "activeBlurStopsWithoutRestart": true,
+      "chatStop": true,
+      "pauseBlocks": true,
+      "recordedLocks": 22,
+      "sentGameKeydowns": 95,
+      "exportRecords": 29,
+      "recordedGameKeydowns": 95
+    },
+    "errors": [],
+    "recordResults": {
+      "shadow": 1,
+      "display-match": 22,
+      "hold-observed": 5,
+      "cancelled": 1
+    },
+    "evidence": "local-browser-fixture"
+  },
+  "gaugeOwnership": {
+    "environment": "Offline Chrome fixture using verified public client helpers and nested opponent gauge markup; no live-site, server, or Tampermonkey claim",
+    "clientSha256": "223960D0C6DD0E4E5F3E8C421B12FF9DB504CF0EF0FD4E248E873D50C4DF6538",
+    "scriptVersion": "0.2.3",
+    "userscriptSha256": "fad0a56add17752ae15422368448b9a59115a7a192cab384a9bd2a34a76f0781",
+    "passed": true,
+    "checks": [
+      {
+        "name": "one-opponent-visible",
+        "opponentCount": 1,
+        "slotVisible": true,
+        "ownIncoming": 17,
+        "passed": true,
+        "errors": [],
+        "totalIncomingGauges": 2,
+        "inspection": {
+          "scriptVersion": "0.2.3",
+          "adapter": "public-dom",
+          "authority": "display-only",
+          "candidates": 1,
+          "render": {
+            "ownIncomingGauges": 1,
+            "currentLayers": 1,
+            "ghostLayers": 0,
+            "fixedCells": 200
+          },
+          "status": {
+            "playing": true,
+            "paused": false,
+            "ended": false,
+            "spectating": false,
+            "inputEnabled": true
+          },
+          "snapshot": {
+            "board": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "current": {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            },
+            "next": [
+              "L",
+              "J",
+              "S",
+              "I",
+              "O"
+            ],
+            "hold": null,
+            "canHold": true,
+            "fingerprint": "dom-64e139c1",
+            "session": "local-dom-session-1-1",
+            "player": "local-dom-player-1",
+            "observedAt": 207,
+            "observation": 1,
+            "paused": false,
+            "ended": false,
+            "lines": 0,
+            "incoming": 17,
+            "rotationCandidates": [
+              {
+                "type": "T",
+                "x": 3,
+                "y": 0,
+                "rotation": 0
+              }
+            ]
+          },
+          "unknown": [
+            "serverRevision",
+            "pieceVersion",
+            "lockDeadline",
+            "rotationHistory",
+            "combo",
+            "backToBack",
+            "attack"
+          ]
+        },
+        "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 84.6ms · 깊이 3 · 노드 14018",
+        "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 84.6ms · 깊이 3 · 노드 14018",
+        "keydownsAfterF8": 0,
+        "actualLocks": 3,
+        "sentGameKeydowns": 14,
+        "duplicateHardDrops": 0,
+        "evidencePath": "reports/gauge-one-opponent-visible.jsonl",
+        "exportRecords": 4,
+        "recordedGameKeydowns": 14,
+        "displayMatchedPlacements": 3,
+        "observedIncoming": [
+          17
+        ]
+      },
+      {
+        "name": "one-opponent-hidden",
+        "opponentCount": 1,
+        "slotVisible": false,
+        "ownIncoming": 17,
+        "passed": true,
+        "errors": [],
+        "totalIncomingGauges": 2,
+        "inspection": {
+          "scriptVersion": "0.2.3",
+          "adapter": "public-dom",
+          "authority": "display-only",
+          "candidates": 1,
+          "render": {
+            "ownIncomingGauges": 1,
+            "currentLayers": 1,
+            "ghostLayers": 0,
+            "fixedCells": 200
+          },
+          "status": {
+            "playing": true,
+            "paused": false,
+            "ended": false,
+            "spectating": false,
+            "inputEnabled": true
+          },
+          "snapshot": {
+            "board": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "current": {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            },
+            "next": [
+              "L",
+              "J",
+              "S",
+              "I",
+              "O"
+            ],
+            "hold": null,
+            "canHold": true,
+            "fingerprint": "dom-64e139c1",
+            "session": "local-dom-session-1-1",
+            "player": "local-dom-player-1",
+            "observedAt": 109.60000002384186,
+            "observation": 1,
+            "paused": false,
+            "ended": false,
+            "lines": 0,
+            "incoming": 17,
+            "rotationCandidates": [
+              {
+                "type": "T",
+                "x": 3,
+                "y": 0,
+                "rotation": 0
+              }
+            ]
+          },
+          "unknown": [
+            "serverRevision",
+            "pieceVersion",
+            "lockDeadline",
+            "rotationHistory",
+            "combo",
+            "backToBack",
+            "attack"
+          ]
+        },
+        "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 65.5ms · 깊이 3 · 노드 14020",
+        "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 65.5ms · 깊이 3 · 노드 14020",
+        "keydownsAfterF8": 0,
+        "actualLocks": 3,
+        "sentGameKeydowns": 11,
+        "duplicateHardDrops": 0,
+        "evidencePath": "reports/gauge-one-opponent-hidden.jsonl",
+        "exportRecords": 3,
+        "recordedGameKeydowns": 11,
+        "displayMatchedPlacements": 3,
+        "observedIncoming": [
+          17
+        ]
+      },
+      {
+        "name": "two-opponents-visible",
+        "opponentCount": 2,
+        "slotVisible": true,
+        "ownIncoming": 17,
+        "passed": true,
+        "errors": [],
+        "totalIncomingGauges": 3,
+        "inspection": {
+          "scriptVersion": "0.2.3",
+          "adapter": "public-dom",
+          "authority": "display-only",
+          "candidates": 1,
+          "render": {
+            "ownIncomingGauges": 1,
+            "currentLayers": 1,
+            "ghostLayers": 0,
+            "fixedCells": 200
+          },
+          "status": {
+            "playing": true,
+            "paused": false,
+            "ended": false,
+            "spectating": false,
+            "inputEnabled": true
+          },
+          "snapshot": {
+            "board": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "current": {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            },
+            "next": [
+              "L",
+              "J",
+              "S",
+              "I",
+              "O"
+            ],
+            "hold": null,
+            "canHold": true,
+            "fingerprint": "dom-64e139c1",
+            "session": "local-dom-session-1-1",
+            "player": "local-dom-player-1",
+            "observedAt": 100.30000001192093,
+            "observation": 1,
+            "paused": false,
+            "ended": false,
+            "lines": 0,
+            "incoming": 17,
+            "rotationCandidates": [
+              {
+                "type": "T",
+                "x": 3,
+                "y": 0,
+                "rotation": 0
+              }
+            ]
+          },
+          "unknown": [
+            "serverRevision",
+            "pieceVersion",
+            "lockDeadline",
+            "rotationHistory",
+            "combo",
+            "backToBack",
+            "attack"
+          ]
+        },
+        "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 65.6ms · 깊이 3 · 노드 14018",
+        "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 65.6ms · 깊이 3 · 노드 14018",
+        "keydownsAfterF8": 0,
+        "actualLocks": 3,
+        "sentGameKeydowns": 14,
+        "duplicateHardDrops": 0,
+        "evidencePath": "reports/gauge-two-opponents-visible.jsonl",
+        "exportRecords": 4,
+        "recordedGameKeydowns": 14,
+        "displayMatchedPlacements": 3,
+        "observedIncoming": [
+          17
+        ]
+      },
+      {
+        "name": "two-opponents-hidden",
+        "opponentCount": 2,
+        "slotVisible": false,
+        "ownIncoming": 17,
+        "passed": true,
+        "errors": [],
+        "totalIncomingGauges": 3,
+        "inspection": {
+          "scriptVersion": "0.2.3",
+          "adapter": "public-dom",
+          "authority": "display-only",
+          "candidates": 1,
+          "render": {
+            "ownIncomingGauges": 1,
+            "currentLayers": 1,
+            "ghostLayers": 0,
+            "fixedCells": 200
+          },
+          "status": {
+            "playing": true,
+            "paused": false,
+            "ended": false,
+            "spectating": false,
+            "inputEnabled": true
+          },
+          "snapshot": {
+            "board": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "current": {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            },
+            "next": [
+              "L",
+              "J",
+              "S",
+              "I",
+              "O"
+            ],
+            "hold": null,
+            "canHold": true,
+            "fingerprint": "dom-64e139c1",
+            "session": "local-dom-session-1-1",
+            "player": "local-dom-player-1",
+            "observedAt": 117.69999998807907,
+            "observation": 1,
+            "paused": false,
+            "ended": false,
+            "lines": 0,
+            "incoming": 17,
+            "rotationCandidates": [
+              {
+                "type": "T",
+                "x": 3,
+                "y": 0,
+                "rotation": 0
+              }
+            ]
+          },
+          "unknown": [
+            "serverRevision",
+            "pieceVersion",
+            "lockDeadline",
+            "rotationHistory",
+            "combo",
+            "backToBack",
+            "attack"
+          ]
+        },
+        "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 71.4ms · 깊이 3 · 노드 14020",
+        "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 71.4ms · 깊이 3 · 노드 14020",
+        "keydownsAfterF8": 0,
+        "actualLocks": 3,
+        "sentGameKeydowns": 10,
+        "duplicateHardDrops": 0,
+        "evidencePath": "reports/gauge-two-opponents-hidden.jsonl",
+        "exportRecords": 4,
+        "recordedGameKeydowns": 10,
+        "displayMatchedPlacements": 3,
+        "observedIncoming": [
+          17
+        ]
+      },
+      {
+        "name": "own-absent-two-opponents",
+        "opponentCount": 2,
+        "slotVisible": true,
+        "ownIncoming": null,
+        "passed": true,
+        "errors": [],
+        "totalIncomingGauges": 2,
+        "inspection": {
+          "scriptVersion": "0.2.3",
+          "adapter": "public-dom",
+          "authority": "display-only",
+          "candidates": 1,
+          "render": {
+            "ownIncomingGauges": 0,
+            "currentLayers": 1,
+            "ghostLayers": 0,
+            "fixedCells": 200
+          },
+          "status": {
+            "playing": true,
+            "paused": false,
+            "ended": false,
+            "spectating": false,
+            "inputEnabled": true
+          },
+          "snapshot": {
+            "board": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "current": {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            },
+            "next": [
+              "L",
+              "J",
+              "S",
+              "I",
+              "O"
+            ],
+            "hold": null,
+            "canHold": true,
+            "fingerprint": "dom-8775043e",
+            "session": "local-dom-session-1-1",
+            "player": "local-dom-player-1",
+            "observedAt": 116,
+            "observation": 1,
+            "paused": false,
+            "ended": false,
+            "lines": 0,
+            "incoming": null,
+            "rotationCandidates": [
+              {
+                "type": "T",
+                "x": 3,
+                "y": 0,
+                "rotation": 0
+              }
+            ]
+          },
+          "unknown": [
+            "serverRevision",
+            "pieceVersion",
+            "lockDeadline",
+            "rotationHistory",
+            "combo",
+            "backToBack",
+            "attack"
+          ]
+        },
+        "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 65.9ms · 깊이 3 · 노드 14022",
+        "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 65.9ms · 깊이 3 · 노드 14022",
+        "keydownsAfterF8": 0,
+        "actualLocks": 3,
+        "sentGameKeydowns": 11,
+        "duplicateHardDrops": 0,
+        "evidencePath": "reports/gauge-own-absent-two-opponents.jsonl",
+        "exportRecords": 3,
+        "recordedGameKeydowns": 11,
+        "displayMatchedPlacements": 3,
+        "observedIncoming": [
+          null
+        ]
+      }
+    ]
+  },
+  "startupRecovery": {
+    "transientObservation": "typed transition retry bounded to 1200 ms; cancellation and game-state guards retained",
+    "gravity": "full original and fresh path revalidation across all observed rotations; identical terminal placement required",
+    "diagnostics": "startup errors survive environmental stop events; version and game status included",
+    "replay": {
+      "scriptVersion": "0.2.3",
+      "passed": true,
+      "results": [
+        {
+          "file": "browser-evidence.jsonl",
+          "exitCode": 0,
+          "records": 29,
+          "counts": {
+            "shadow": 1,
+            "display-consistent": 22,
+            "hold-consistent": 5,
+            "cancelled": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-after-hold-one-row.jsonl",
+          "exitCode": 0,
+          "records": 4,
+          "counts": {
+            "interrupted-replan": 1,
+            "display-consistent": 3
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-after-lock-four-rows.jsonl",
+          "exitCode": 0,
+          "records": 5,
+          "counts": {
+            "observed-rise-consistent": 1,
+            "display-consistent": 3,
+            "hold-consistent": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-after-lock-one-row.jsonl",
+          "exitCode": 0,
+          "records": 5,
+          "counts": {
+            "observed-rise-consistent": 1,
+            "display-consistent": 3,
+            "hold-consistent": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-f8-during-recovery.jsonl",
+          "exitCode": 0,
+          "records": 1,
+          "counts": {
+            "interrupted-replan": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-movement-one-row.jsonl",
+          "exitCode": 0,
+          "records": 5,
+          "counts": {
+            "hold-consistent": 1,
+            "interrupted-replan": 1,
+            "display-consistent": 3
+          },
+          "failures": []
+        },
+        {
+          "file": "gauge-one-opponent-hidden.jsonl",
+          "exitCode": 0,
+          "records": 3,
+          "counts": {
+            "display-consistent": 3
+          },
+          "failures": []
+        },
+        {
+          "file": "gauge-one-opponent-visible.jsonl",
+          "exitCode": 0,
+          "records": 4,
+          "counts": {
+            "display-consistent": 3,
+            "hold-consistent": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "gauge-own-absent-two-opponents.jsonl",
+          "exitCode": 0,
+          "records": 3,
+          "counts": {
+            "display-consistent": 3
+          },
+          "failures": []
+        },
+        {
+          "file": "gauge-two-opponents-hidden.jsonl",
+          "exitCode": 0,
+          "records": 4,
+          "counts": {
+            "hold-consistent": 1,
+            "display-consistent": 3
+          },
+          "failures": []
+        },
+        {
+          "file": "gauge-two-opponents-visible.jsonl",
+          "exitCode": 0,
+          "records": 4,
+          "counts": {
+            "display-consistent": 3,
+            "hold-consistent": 1
+          },
+          "failures": []
+        }
+      ]
+    }
+  },
+  "garbageRecovery": {
+    "browser": {
+      "environment": "Offline local Chrome fixture with SHA256-verified public client helpers; no live-site, server, or Tampermonkey claim",
+      "clientSha256": "223960D0C6DD0E4E5F3E8C421B12FF9DB504CF0EF0FD4E248E873D50C4DF6538",
+      "passed": true,
+      "checks": [
+        {
+          "name": "movement-one-row",
+          "passed": true,
+          "injection": {
+            "trigger": "move_right",
+            "holes": [
+              6
+            ],
+            "rows": 1,
+            "at": 908.6999999880791,
+            "firstLockCount": 0,
+            "keydowns": 2,
+            "before": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              959
+            ]
+          },
+          "errors": [],
+          "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 1회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 78.7ms · 깊이 3 · 노드 14021",
+          "firstLockCount": 0,
+          "finalLocks": 3,
+          "newLocksAfterInjection": 3,
+          "sentGameKeydowns": 16,
+          "newGameKeydownsAfterInjection": 14,
+          "keydownsAfterF8": 0,
+          "duplicateHardDrops": 0,
+          "evidencePath": "reports/garbage-movement-one-row.jsonl",
+          "exportRecords": 5,
+          "recordedGameKeydowns": 16,
+          "observedResyncs": [
+            {
+              "reason": "garbage-rise",
+              "phase": "movement",
+              "rows": 1,
+              "holes": [
+                6
+              ],
+              "completedAction": null,
+              "reference": "before",
+              "hardDrops": 0
+            }
+          ],
+          "verifiedLocksAfterResync": 3
+        },
+        {
+          "name": "after-lock-one-row",
+          "passed": true,
+          "injection": {
+            "trigger": "hard_drop",
+            "holes": [
+              6
+            ],
+            "rows": 1,
+            "at": 318.5,
+            "firstLockCount": 1,
+            "keydowns": 2,
+            "before": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32,
+              112
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32,
+              112,
+              959
+            ]
+          },
+          "errors": [],
+          "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 1회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 63.4ms · 깊이 3 · 노드 12581",
+          "firstLockCount": 1,
+          "finalLocks": 4,
+          "newLocksAfterInjection": 3,
+          "sentGameKeydowns": 17,
+          "newGameKeydownsAfterInjection": 15,
+          "keydownsAfterF8": 0,
+          "duplicateHardDrops": 0,
+          "evidencePath": "reports/garbage-after-lock-one-row.jsonl",
+          "exportRecords": 5,
+          "recordedGameKeydowns": 17,
+          "observedResyncs": [
+            {
+              "reason": "garbage-rise",
+              "phase": "after-lock",
+              "rows": 1,
+              "holes": [
+                6
+              ],
+              "completedAction": "HARD_DROP",
+              "reference": "predicted-lock",
+              "hardDrops": 1
+            }
+          ],
+          "verifiedLocksAfterResync": 3
+        },
+        {
+          "name": "after-lock-four-rows",
+          "passed": true,
+          "injection": {
+            "trigger": "hard_drop",
+            "holes": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "rows": 4,
+            "at": 294,
+            "firstLockCount": 1,
+            "keydowns": 2,
+            "before": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32,
+              112
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32,
+              112,
+              767,
+              767,
+              767,
+              767
+            ]
+          },
+          "errors": [],
+          "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 1회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 75.1ms · 깊이 3 · 노드 12418",
+          "firstLockCount": 1,
+          "finalLocks": 4,
+          "newLocksAfterInjection": 3,
+          "sentGameKeydowns": 16,
+          "newGameKeydownsAfterInjection": 14,
+          "keydownsAfterF8": 0,
+          "duplicateHardDrops": 0,
+          "evidencePath": "reports/garbage-after-lock-four-rows.jsonl",
+          "exportRecords": 5,
+          "recordedGameKeydowns": 16,
+          "observedResyncs": [
+            {
+              "reason": "garbage-rise",
+              "phase": "after-lock",
+              "rows": 4,
+              "holes": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "completedAction": "HARD_DROP",
+              "reference": "predicted-lock",
+              "hardDrops": 1
+            }
+          ],
+          "verifiedLocksAfterResync": 3
+        },
+        {
+          "name": "after-hold-one-row",
+          "passed": true,
+          "injection": {
+            "trigger": "hold",
+            "holes": [
+              6
+            ],
+            "rows": 1,
+            "at": 236.5,
+            "firstLockCount": 0,
+            "keydowns": 1,
+            "before": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              767,
+              767,
+              767,
+              767
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              767,
+              767,
+              767,
+              767,
+              959
+            ]
+          },
+          "errors": [],
+          "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 1회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 68.2ms · 깊이 3 · 노드 13283",
+          "firstLockCount": 0,
+          "finalLocks": 3,
+          "newLocksAfterInjection": 3,
+          "sentGameKeydowns": 15,
+          "newGameKeydownsAfterInjection": 14,
+          "keydownsAfterF8": 0,
+          "duplicateHardDrops": 0,
+          "evidencePath": "reports/garbage-after-hold-one-row.jsonl",
+          "exportRecords": 4,
+          "recordedGameKeydowns": 15,
+          "observedResyncs": [
+            {
+              "reason": "garbage-rise",
+              "phase": "after-hold",
+              "rows": 1,
+              "holes": [
+                6
+              ],
+              "completedAction": "HOLD",
+              "reference": "before",
+              "hardDrops": 0
+            }
+          ],
+          "verifiedLocksAfterResync": 3
+        },
+        {
+          "name": "f8-during-recovery",
+          "passed": true,
+          "injection": {
+            "trigger": "move_right",
+            "holes": [
+              6
+            ],
+            "rows": 1,
+            "at": 216.39999997615814,
+            "firstLockCount": 0,
+            "keydowns": 1,
+            "before": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              959
+            ]
+          },
+          "errors": [],
+          "statusBeforeStop": "STOPPED · 표시 검증 0회 · 재계획 1회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 83.9ms · 깊이 3 · 노드 16926",
+          "firstLockCount": 0,
+          "finalLocks": 0,
+          "newLocksAfterInjection": 0,
+          "sentGameKeydowns": 1,
+          "newGameKeydownsAfterInjection": 0,
+          "keydownsAfterF8": 0,
+          "duplicateHardDrops": 0,
+          "evidencePath": "reports/garbage-f8-during-recovery.jsonl",
+          "exportRecords": 1,
+          "recordedGameKeydowns": 1,
+          "observedResyncs": [
+            {
+              "reason": "garbage-rise",
+              "phase": "movement",
+              "rows": 1,
+              "holes": [
+                6
+              ],
+              "completedAction": null,
+              "reference": "before",
+              "hardDrops": 0
+            }
+          ]
+        }
+      ]
+    },
+    "replay": {
+      "scriptVersion": "0.2.3",
+      "passed": true,
+      "results": [
+        {
+          "file": "garbage-after-hold-one-row.jsonl",
+          "exitCode": 0,
+          "records": 4,
+          "counts": {
+            "interrupted-replan": 1,
+            "display-consistent": 3
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-after-lock-four-rows.jsonl",
+          "exitCode": 0,
+          "records": 5,
+          "counts": {
+            "observed-rise-consistent": 1,
+            "display-consistent": 3,
+            "hold-consistent": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-after-lock-one-row.jsonl",
+          "exitCode": 0,
+          "records": 5,
+          "counts": {
+            "observed-rise-consistent": 1,
+            "display-consistent": 3,
+            "hold-consistent": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-f8-during-recovery.jsonl",
+          "exitCode": 0,
+          "records": 1,
+          "counts": {
+            "interrupted-replan": 1
+          },
+          "failures": []
+        },
+        {
+          "file": "garbage-movement-one-row.jsonl",
+          "exitCode": 0,
+          "records": 5,
+          "counts": {
+            "hold-consistent": 1,
+            "interrupted-replan": 1,
+            "display-consistent": 3
+          },
+          "failures": []
+        }
+      ]
+    },
+    "userEvidence": {
+      "records": 370,
+      "placementRecords": 277,
+      "holdRecords": 81,
+      "failures": 12,
+      "afterLockRiseFailures": 7,
+      "midMovementRiseFailures": 1,
+      "gravityPathFailures": 3,
+      "userStops": 1,
+      "files": [
+        {
+          "file": "tetris-evidence-1792724485783.jsonl",
+          "records": 89,
+          "results": {
+            "display-match": 67,
+            "hold-observed": 22
+          },
+          "hasVersionFields": false,
+          "resyncRecords": 0,
+          "failures": []
+        },
+        {
+          "file": "tetris-evidence-1792725269198.jsonl",
+          "records": 202,
+          "results": {
+            "hold-observed": 42,
+            "display-match": 152,
+            "cancelled": 1,
+            "unknown": 7
+          },
+          "hasVersionFields": false,
+          "resyncRecords": 0,
+          "failures": [
+            {
+              "index": 134,
+              "result": "cancelled",
+              "kind": "user-stop",
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 136,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 1,
+              "holes": [
+                6
+              ],
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 160,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 1,
+              "holes": [
+                5
+              ],
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 181,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 1,
+              "holes": [
+                8
+              ],
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 182,
+              "result": "unknown",
+              "kind": "gravity-advance",
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 198,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 4,
+              "holes": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 199,
+              "result": "unknown",
+              "kind": "gravity-advance",
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 202,
+              "result": "unknown",
+              "kind": "movement-rise",
+              "coveredBy": "0.2.1"
+            }
+          ]
+        },
+        {
+          "file": "tetris-evidence-1792725492925.jsonl",
+          "records": 79,
+          "results": {
+            "display-match": 58,
+            "hold-observed": 17,
+            "unknown": 4
+          },
+          "hasVersionFields": false,
+          "resyncRecords": 0,
+          "failures": [
+            {
+              "index": 38,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 4,
+              "holes": [
+                8,
+                8,
+                8,
+                8
+              ],
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 43,
+              "result": "unknown",
+              "kind": "gravity-advance",
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 70,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 2,
+              "holes": [
+                1,
+                1
+              ],
+              "coveredBy": "0.2.1"
+            },
+            {
+              "index": 79,
+              "result": "unknown",
+              "kind": "after-lock-rise",
+              "rows": 4,
+              "holes": [
+                5,
+                5,
+                5,
+                5
+              ],
+              "coveredBy": "0.2.1"
+            }
+          ]
+        }
+      ],
+      "regressionFixture": "fixtures/garbage-regression.json",
+      "scope": "Supplied logs contain no script version. All 11 non-cancellation failure cases are covered by local v0.2.1 controller regressions. Patched build live execution is not established by these logs.",
+      "audit": "reports/user-log-audit.json"
+    }
+  },
+  "benchmark": {
+    "settings": {
+      "seeds": 8,
+      "pieces": 80,
+      "budgetMs": 10,
+      "maxNodes": 6000,
+      "beamWidth": 2,
+      "maxPathLength": 14,
+      "visibleQueue": 5,
+      "orientation": "known from simulated spawn; initial ambiguous DOM orientation is not benchmarked"
+    },
+    "totalLocks": 1760,
+    "evidence": "local synthetic CPU simulation only"
+  },
+  "stages": {
+    "offline": "passed",
+    "publicClientOffline": "passed with unchanged physics",
+    "localChrome": "passed including garbage recovery",
+    "actualSiteShadow": "not independently run",
+    "actualSiteSingleStep": "not independently run",
+    "actualSiteLive": "user-provided 370 display records analyzed; patched build live execution not verified",
+    "tampermonkeyCSP": "user-provided records lack script version; patched install not verified",
+    "real1000LockGate": "not achieved",
+    "competitiveAndHuman": "not independently evaluated"
+  },
+  "limitations": [
+    "Public DOM may contain client prediction; no authoritative server claim",
+    "180/spin/attack/cancel/insertion timing disabled or unknown",
+    "Unexpected board changes during execution may safely stop",
+    "Local fixture has no automatic gravity, server, or opponents",
+    "Replay validates action order but does not evolve gravity/lock timing",
+    "Synthetic garbage benchmark is not a site distribution; deeper search regressed on its garbage sample"
+  ]
+}

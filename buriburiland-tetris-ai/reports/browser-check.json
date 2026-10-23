@@ -1,0 +1,27 @@
+{
+  "environment": "local Chrome fixture using public client helpers; no site/server/Tampermonkey claim",
+  "checks": {
+    "idleBlurPreservesStatus": true,
+    "dom": true,
+    "scriptVersion": "0.2.3",
+    "inspectionReadiness": true,
+    "idleBlurPreservesInspection": true,
+    "environmentPreservesStartupError": true,
+    "f8CancelsSpawnObservation": true,
+    "shadowZeroInputs": true,
+    "spawnTransitionRecovers": true,
+    "continuousLocks": 20,
+    "f8NoFurtherKeydowns": true,
+    "gravitySearchRequests": 5,
+    "gravitySearchDrops": 5,
+    "gravityVerifiedPlacements": 3,
+    "activeBlurStopsWithoutRestart": true,
+    "chatStop": true,
+    "pauseBlocks": true,
+    "recordedLocks": 22,
+    "sentGameKeydowns": 95,
+    "exportRecords": 29,
+    "recordedGameKeydowns": 95
+  },
+  "errors": []
+}

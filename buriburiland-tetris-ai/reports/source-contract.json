@@ -1,0 +1,105 @@
+{
+  "kind": "public-client-source-differential",
+  "source": {
+    "file": "847.a5a05f14ceb3f87d.js",
+    "url": "https://buriburiland.com/_next/static/chunks/847.a5a05f14ceb3f87d.js",
+    "sha256": "223960D0C6DD0E4E5F3E8C421B12FF9DB504CF0EF0FD4E248E873D50C4DF6538",
+    "verifiedAt": "2026-10-23"
+  },
+  "authority": "Public client helpers compared offline; server authority and live browser behavior unverified",
+  "normalization": [
+    "Bit rows compare occupied cells to positive numeric client matrix cells; block colors do not affect collision.",
+    "A runtime blocked action returns null; the client returns the unchanged piece. Both compare as no movement.",
+    "Runtime lock topOut:true normalizes to client lock:null when any occupied cell remains above row zero."
+  ],
+  "excluded": [
+    "180-degree rotation is disabled in runtime",
+    "server reconciliation",
+    "spin",
+    "attack",
+    "garbage insertion/cancellation timing",
+    "live play"
+  ],
+  "scenarioCounts": {
+    "empty": 1,
+    "four-line-right-well": 1,
+    "spawn-blocked": 1,
+    "left-wall-tower": 1,
+    "right-wall-tower": 1,
+    "irregular-holes-overhangs": 48,
+    "garbage-fixed-hole": 24,
+    "garbage-changing-hole": 24
+  },
+  "comparisons": {
+    "shape": {
+      "compared": 28,
+      "matched": 28,
+      "mismatched": 0
+    },
+    "spawn": {
+      "compared": 707,
+      "matched": 707,
+      "mismatched": 0
+    },
+    "collision": {
+      "compared": 248864,
+      "matched": 248864,
+      "mismatched": 0
+    },
+    "move_left": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "move_right": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "soft_drop": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "rotate_cw": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "rotate_ccw": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "hard_drop": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "lock": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "hard_drop_lock": {
+      "compared": 71935,
+      "matched": 71935,
+      "mismatched": 0
+    },
+    "key_mapping": {
+      "compared": 8,
+      "matched": 8,
+      "mismatched": 0
+    },
+    "piece_colors": {
+      "compared": 1,
+      "matched": 1,
+      "mismatched": 0
+    }
+  },
+  "divergences": [],
+  "status": "passed",
+  "totalCompared": 825088,
+  "totalMismatches": 0,
+  "elapsedMs": 4052.84
+}

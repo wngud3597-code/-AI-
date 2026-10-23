@@ -1,0 +1,168 @@
+{
+  "analyzedAt": "2026-10-23T03:32:21.935Z",
+  "evidence": "user-provided-public-dom-records",
+  "files": [
+    {
+      "file": "tetris-evidence-1792724485783.jsonl",
+      "records": 89,
+      "results": {
+        "display-match": 67,
+        "hold-observed": 22
+      },
+      "hasVersionFields": false,
+      "resyncRecords": 0,
+      "failures": []
+    },
+    {
+      "file": "tetris-evidence-1792725269198.jsonl",
+      "records": 202,
+      "results": {
+        "hold-observed": 42,
+        "display-match": 152,
+        "cancelled": 1,
+        "unknown": 7
+      },
+      "hasVersionFields": false,
+      "resyncRecords": 0,
+      "failures": [
+        {
+          "index": 134,
+          "result": "cancelled",
+          "kind": "user-stop",
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 136,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 1,
+          "holes": [
+            6
+          ],
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 160,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 1,
+          "holes": [
+            5
+          ],
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 181,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 1,
+          "holes": [
+            8
+          ],
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 182,
+          "result": "unknown",
+          "kind": "gravity-advance",
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 198,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 4,
+          "holes": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 199,
+          "result": "unknown",
+          "kind": "gravity-advance",
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 202,
+          "result": "unknown",
+          "kind": "movement-rise",
+          "coveredBy": "0.2.1"
+        }
+      ]
+    },
+    {
+      "file": "tetris-evidence-1792725492925.jsonl",
+      "records": 79,
+      "results": {
+        "display-match": 58,
+        "hold-observed": 17,
+        "unknown": 4
+      },
+      "hasVersionFields": false,
+      "resyncRecords": 0,
+      "failures": [
+        {
+          "index": 38,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 4,
+          "holes": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 43,
+          "result": "unknown",
+          "kind": "gravity-advance",
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 70,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 2,
+          "holes": [
+            1,
+            1
+          ],
+          "coveredBy": "0.2.1"
+        },
+        {
+          "index": 79,
+          "result": "unknown",
+          "kind": "after-lock-rise",
+          "rows": 4,
+          "holes": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "coveredBy": "0.2.1"
+        }
+      ]
+    }
+  ],
+  "total": {
+    "records": 370,
+    "placementRecords": 277,
+    "holdRecords": 81,
+    "failures": 12,
+    "afterLockRiseFailures": 7,
+    "midMovementRiseFailures": 1,
+    "gravityPathFailures": 3,
+    "userStops": 1
+  },
+  "exactDuplicateRecords": 0,
+  "regressionFixture": "fixtures/garbage-regression.json",
+  "regressionCases": 11,
+  "scope": "Supplied logs contain no script version. All 11 non-cancellation failure cases are covered by local v0.2.1 controller regressions. Patched build live execution is not established by these logs."
+}

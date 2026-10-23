@@ -1,0 +1,10 @@
+{
+  "tetris-ai.user.js": {
+    "bytes": 90534,
+    "sha256": "fad0a56add17752ae15422368448b9a59115a7a192cab384a9bd2a34a76f0781"
+  },
+  "tetris-ai.worker.js": {
+    "bytes": 22699,
+    "sha256": "b8e71d342c6b030aec45bd8b8453338058398ae91cc98f1ccfbd976da79533e9"
+  }
+}

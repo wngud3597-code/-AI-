@@ -1,0 +1,539 @@
+{
+  "environment": "Offline Chrome fixture using verified public client helpers and nested opponent gauge markup; no live-site, server, or Tampermonkey claim",
+  "clientSha256": "223960D0C6DD0E4E5F3E8C421B12FF9DB504CF0EF0FD4E248E873D50C4DF6538",
+  "scriptVersion": "0.2.3",
+  "userscriptSha256": "fad0a56add17752ae15422368448b9a59115a7a192cab384a9bd2a34a76f0781",
+  "passed": true,
+  "checks": [
+    {
+      "name": "one-opponent-visible",
+      "opponentCount": 1,
+      "slotVisible": true,
+      "ownIncoming": 17,
+      "passed": true,
+      "errors": [],
+      "totalIncomingGauges": 2,
+      "inspection": {
+        "scriptVersion": "0.2.3",
+        "adapter": "public-dom",
+        "authority": "display-only",
+        "candidates": 1,
+        "render": {
+          "ownIncomingGauges": 1,
+          "currentLayers": 1,
+          "ghostLayers": 0,
+          "fixedCells": 200
+        },
+        "status": {
+          "playing": true,
+          "paused": false,
+          "ended": false,
+          "spectating": false,
+          "inputEnabled": true
+        },
+        "snapshot": {
+          "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "current": {
+            "type": "T",
+            "x": 3,
+            "y": 0,
+            "rotation": 0
+          },
+          "next": [
+            "L",
+            "J",
+            "S",
+            "I",
+            "O"
+          ],
+          "hold": null,
+          "canHold": true,
+          "fingerprint": "dom-64e139c1",
+          "session": "local-dom-session-1-1",
+          "player": "local-dom-player-1",
+          "observedAt": 207,
+          "observation": 1,
+          "paused": false,
+          "ended": false,
+          "lines": 0,
+          "incoming": 17,
+          "rotationCandidates": [
+            {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        "unknown": [
+          "serverRevision",
+          "pieceVersion",
+          "lockDeadline",
+          "rotationHistory",
+          "combo",
+          "backToBack",
+          "attack"
+        ]
+      },
+      "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 84.6ms · 깊이 3 · 노드 14018",
+      "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 84.6ms · 깊이 3 · 노드 14018",
+      "keydownsAfterF8": 0,
+      "actualLocks": 3,
+      "sentGameKeydowns": 14,
+      "duplicateHardDrops": 0,
+      "evidencePath": "reports/gauge-one-opponent-visible.jsonl",
+      "exportRecords": 4,
+      "recordedGameKeydowns": 14,
+      "displayMatchedPlacements": 3,
+      "observedIncoming": [
+        17
+      ]
+    },
+    {
+      "name": "one-opponent-hidden",
+      "opponentCount": 1,
+      "slotVisible": false,
+      "ownIncoming": 17,
+      "passed": true,
+      "errors": [],
+      "totalIncomingGauges": 2,
+      "inspection": {
+        "scriptVersion": "0.2.3",
+        "adapter": "public-dom",
+        "authority": "display-only",
+        "candidates": 1,
+        "render": {
+          "ownIncomingGauges": 1,
+          "currentLayers": 1,
+          "ghostLayers": 0,
+          "fixedCells": 200
+        },
+        "status": {
+          "playing": true,
+          "paused": false,
+          "ended": false,
+          "spectating": false,
+          "inputEnabled": true
+        },
+        "snapshot": {
+          "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "current": {
+            "type": "T",
+            "x": 3,
+            "y": 0,
+            "rotation": 0
+          },
+          "next": [
+            "L",
+            "J",
+            "S",
+            "I",
+            "O"
+          ],
+          "hold": null,
+          "canHold": true,
+          "fingerprint": "dom-64e139c1",
+          "session": "local-dom-session-1-1",
+          "player": "local-dom-player-1",
+          "observedAt": 109.60000002384186,
+          "observation": 1,
+          "paused": false,
+          "ended": false,
+          "lines": 0,
+          "incoming": 17,
+          "rotationCandidates": [
+            {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        "unknown": [
+          "serverRevision",
+          "pieceVersion",
+          "lockDeadline",
+          "rotationHistory",
+          "combo",
+          "backToBack",
+          "attack"
+        ]
+      },
+      "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 65.5ms · 깊이 3 · 노드 14020",
+      "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 65.5ms · 깊이 3 · 노드 14020",
+      "keydownsAfterF8": 0,
+      "actualLocks": 3,
+      "sentGameKeydowns": 11,
+      "duplicateHardDrops": 0,
+      "evidencePath": "reports/gauge-one-opponent-hidden.jsonl",
+      "exportRecords": 3,
+      "recordedGameKeydowns": 11,
+      "displayMatchedPlacements": 3,
+      "observedIncoming": [
+        17
+      ]
+    },
+    {
+      "name": "two-opponents-visible",
+      "opponentCount": 2,
+      "slotVisible": true,
+      "ownIncoming": 17,
+      "passed": true,
+      "errors": [],
+      "totalIncomingGauges": 3,
+      "inspection": {
+        "scriptVersion": "0.2.3",
+        "adapter": "public-dom",
+        "authority": "display-only",
+        "candidates": 1,
+        "render": {
+          "ownIncomingGauges": 1,
+          "currentLayers": 1,
+          "ghostLayers": 0,
+          "fixedCells": 200
+        },
+        "status": {
+          "playing": true,
+          "paused": false,
+          "ended": false,
+          "spectating": false,
+          "inputEnabled": true
+        },
+        "snapshot": {
+          "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "current": {
+            "type": "T",
+            "x": 3,
+            "y": 0,
+            "rotation": 0
+          },
+          "next": [
+            "L",
+            "J",
+            "S",
+            "I",
+            "O"
+          ],
+          "hold": null,
+          "canHold": true,
+          "fingerprint": "dom-64e139c1",
+          "session": "local-dom-session-1-1",
+          "player": "local-dom-player-1",
+          "observedAt": 100.30000001192093,
+          "observation": 1,
+          "paused": false,
+          "ended": false,
+          "lines": 0,
+          "incoming": 17,
+          "rotationCandidates": [
+            {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        "unknown": [
+          "serverRevision",
+          "pieceVersion",
+          "lockDeadline",
+          "rotationHistory",
+          "combo",
+          "backToBack",
+          "attack"
+        ]
+      },
+      "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 65.6ms · 깊이 3 · 노드 14018",
+      "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 65.6ms · 깊이 3 · 노드 14018",
+      "keydownsAfterF8": 0,
+      "actualLocks": 3,
+      "sentGameKeydowns": 14,
+      "duplicateHardDrops": 0,
+      "evidencePath": "reports/gauge-two-opponents-visible.jsonl",
+      "exportRecords": 4,
+      "recordedGameKeydowns": 14,
+      "displayMatchedPlacements": 3,
+      "observedIncoming": [
+        17
+      ]
+    },
+    {
+      "name": "two-opponents-hidden",
+      "opponentCount": 2,
+      "slotVisible": false,
+      "ownIncoming": 17,
+      "passed": true,
+      "errors": [],
+      "totalIncomingGauges": 3,
+      "inspection": {
+        "scriptVersion": "0.2.3",
+        "adapter": "public-dom",
+        "authority": "display-only",
+        "candidates": 1,
+        "render": {
+          "ownIncomingGauges": 1,
+          "currentLayers": 1,
+          "ghostLayers": 0,
+          "fixedCells": 200
+        },
+        "status": {
+          "playing": true,
+          "paused": false,
+          "ended": false,
+          "spectating": false,
+          "inputEnabled": true
+        },
+        "snapshot": {
+          "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "current": {
+            "type": "T",
+            "x": 3,
+            "y": 0,
+            "rotation": 0
+          },
+          "next": [
+            "L",
+            "J",
+            "S",
+            "I",
+            "O"
+          ],
+          "hold": null,
+          "canHold": true,
+          "fingerprint": "dom-64e139c1",
+          "session": "local-dom-session-1-1",
+          "player": "local-dom-player-1",
+          "observedAt": 117.69999998807907,
+          "observation": 1,
+          "paused": false,
+          "ended": false,
+          "lines": 0,
+          "incoming": 17,
+          "rotationCandidates": [
+            {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        "unknown": [
+          "serverRevision",
+          "pieceVersion",
+          "lockDeadline",
+          "rotationHistory",
+          "combo",
+          "backToBack",
+          "attack"
+        ]
+      },
+      "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 71.4ms · 깊이 3 · 노드 14020",
+      "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 71.4ms · 깊이 3 · 노드 14020",
+      "keydownsAfterF8": 0,
+      "actualLocks": 3,
+      "sentGameKeydowns": 10,
+      "duplicateHardDrops": 0,
+      "evidencePath": "reports/gauge-two-opponents-hidden.jsonl",
+      "exportRecords": 4,
+      "recordedGameKeydowns": 10,
+      "displayMatchedPlacements": 3,
+      "observedIncoming": [
+        17
+      ]
+    },
+    {
+      "name": "own-absent-two-opponents",
+      "opponentCount": 2,
+      "slotVisible": true,
+      "ownIncoming": null,
+      "passed": true,
+      "errors": [],
+      "totalIncomingGauges": 2,
+      "inspection": {
+        "scriptVersion": "0.2.3",
+        "adapter": "public-dom",
+        "authority": "display-only",
+        "candidates": 1,
+        "render": {
+          "ownIncomingGauges": 0,
+          "currentLayers": 1,
+          "ghostLayers": 0,
+          "fixedCells": 200
+        },
+        "status": {
+          "playing": true,
+          "paused": false,
+          "ended": false,
+          "spectating": false,
+          "inputEnabled": true
+        },
+        "snapshot": {
+          "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "current": {
+            "type": "T",
+            "x": 3,
+            "y": 0,
+            "rotation": 0
+          },
+          "next": [
+            "L",
+            "J",
+            "S",
+            "I",
+            "O"
+          ],
+          "hold": null,
+          "canHold": true,
+          "fingerprint": "dom-8775043e",
+          "session": "local-dom-session-1-1",
+          "player": "local-dom-player-1",
+          "observedAt": 116,
+          "observation": 1,
+          "paused": false,
+          "ended": false,
+          "lines": 0,
+          "incoming": null,
+          "rotationCandidates": [
+            {
+              "type": "T",
+              "x": 3,
+              "y": 0,
+              "rotation": 0
+            }
+          ]
+        },
+        "unknown": [
+          "serverRevision",
+          "pieceVersion",
+          "lockDeadline",
+          "rotationHistory",
+          "combo",
+          "backToBack",
+          "attack"
+        ]
+      },
+      "statusBeforeStop": "VALIDATING · 표시 검증 2회 · 재계획 0회\nDOM 표시 전이를 비교합니다. 서버 확정 여부는 알 수 없습니다.\n탐색 65.9ms · 깊이 3 · 노드 14022",
+      "finalStatus": "STOPPED · 표시 검증 3회 · 재계획 0회\nF8 긴급 중지. 눌린 키를 해제했습니다.\n탐색 65.9ms · 깊이 3 · 노드 14022",
+      "keydownsAfterF8": 0,
+      "actualLocks": 3,
+      "sentGameKeydowns": 11,
+      "duplicateHardDrops": 0,
+      "evidencePath": "reports/gauge-own-absent-two-opponents.jsonl",
+      "exportRecords": 3,
+      "recordedGameKeydowns": 11,
+      "displayMatchedPlacements": 3,
+      "observedIncoming": [
+        null
+      ]
+    }
+  ]
+}

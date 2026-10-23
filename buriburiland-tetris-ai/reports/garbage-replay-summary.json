@@ -1,0 +1,58 @@
+{
+  "scriptVersion": "0.2.3",
+  "passed": true,
+  "results": [
+    {
+      "file": "garbage-after-hold-one-row.jsonl",
+      "exitCode": 0,
+      "records": 4,
+      "counts": {
+        "interrupted-replan": 1,
+        "display-consistent": 3
+      },
+      "failures": []
+    },
+    {
+      "file": "garbage-after-lock-four-rows.jsonl",
+      "exitCode": 0,
+      "records": 5,
+      "counts": {
+        "observed-rise-consistent": 1,
+        "display-consistent": 3,
+        "hold-consistent": 1
+      },
+      "failures": []
+    },
+    {
+      "file": "garbage-after-lock-one-row.jsonl",
+      "exitCode": 0,
+      "records": 5,
+      "counts": {
+        "observed-rise-consistent": 1,
+        "display-consistent": 3,
+        "hold-consistent": 1
+      },
+      "failures": []
+    },
+    {
+      "file": "garbage-f8-during-recovery.jsonl",
+      "exitCode": 0,
+      "records": 1,
+      "counts": {
+        "interrupted-replan": 1
+      },
+      "failures": []
+    },
+    {
+      "file": "garbage-movement-one-row.jsonl",
+      "exitCode": 0,
+      "records": 5,
+      "counts": {
+        "hold-consistent": 1,
+        "interrupted-replan": 1,
+        "display-consistent": 3
+      },
+      "failures": []
+    }
+  ]
+}

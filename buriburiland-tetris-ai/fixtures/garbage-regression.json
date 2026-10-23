@@ -1,0 +1,1756 @@
+[
+  {
+    "caseId": "log-onebased136",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        96,
+        100,
+        118,
+        1022,
+        767
+      ],
+      "current": {
+        "type": "I",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "L",
+        "Z",
+        "O",
+        "T",
+        "J"
+      ],
+      "hold": "S",
+      "canHold": false,
+      "lines": 2,
+      "incoming": 2,
+      "rotationCandidates": [
+        {
+          "type": "I",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "LEFT",
+        "LEFT",
+        "LEFT",
+        "ROTATE_CCW",
+        "LEFT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "I",
+        "x": 0,
+        "y": 15,
+        "rotation": 3
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        97,
+        101,
+        119,
+        767
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        97,
+        101,
+        119,
+        767,
+        959
+      ],
+      "current": {
+        "type": "L",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "O",
+        "T",
+        "J",
+        "S"
+      ],
+      "hold": "S",
+      "canHold": true,
+      "lines": 3,
+      "incoming": 4,
+      "rotationCandidates": [
+        {
+          "type": "L",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        }
+      ]
+    },
+    "actions": [
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "ROTATE_CCW",
+      "LEFT",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  },
+  {
+    "caseId": "log-onebased160",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        511,
+        1022,
+        767,
+        767,
+        767,
+        767,
+        767,
+        959,
+        959,
+        959,
+        959,
+        1022,
+        767,
+        767,
+        767,
+        767,
+        767,
+        1022
+      ],
+      "current": {
+        "type": "T",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "O",
+        "J",
+        "S",
+        "I"
+      ],
+      "hold": "S",
+      "canHold": true,
+      "lines": 11,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "T",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "ROTATE_CCW",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "T",
+        "x": 8,
+        "y": 0,
+        "rotation": 3
+      },
+      "expectedBoard": [
+        0,
+        512,
+        768,
+        1022,
+        767,
+        767,
+        767,
+        767,
+        767,
+        959,
+        959,
+        959,
+        959,
+        1022,
+        767,
+        767,
+        767,
+        767,
+        767,
+        1022
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        512,
+        768,
+        1022,
+        767,
+        767,
+        767,
+        767,
+        767,
+        959,
+        959,
+        959,
+        959,
+        1022,
+        767,
+        767,
+        767,
+        767,
+        767,
+        1022,
+        991
+      ],
+      "current": {
+        "type": "Z",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "O",
+        "J",
+        "S",
+        "I",
+        "T"
+      ],
+      "hold": "S",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "Z",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        },
+        {
+          "type": "Z",
+          "x": 3,
+          "y": 0,
+          "rotation": 2
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "ROTATE_CCW",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  },
+  {
+    "caseId": "log-onebased181",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        636,
+        1020
+      ],
+      "current": {
+        "type": "O",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "S",
+        "Z",
+        "J",
+        "T",
+        "J"
+      ],
+      "hold": "T",
+      "canHold": true,
+      "lines": 5,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "O",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "LEFT",
+        "LEFT",
+        "LEFT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "O",
+        "x": 0,
+        "y": 18,
+        "rotation": 0
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        639
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        639,
+        767
+      ],
+      "current": {
+        "type": "S",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "J",
+        "T",
+        "J",
+        "Z"
+      ],
+      "hold": "T",
+      "canHold": true,
+      "lines": 6,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "S",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        },
+        {
+          "type": "S",
+          "x": 3,
+          "y": 1,
+          "rotation": 2
+        }
+      ]
+    },
+    "actions": [
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  },
+  {
+    "caseId": "log-onebased182",
+    "kind": "gravity",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        639,
+        767
+      ],
+      "current": {
+        "type": "S",
+        "x": 3,
+        "y": 6,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "J",
+        "T",
+        "J",
+        "Z"
+      ],
+      "hold": "T",
+      "canHold": true,
+      "lines": 6,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "S",
+          "x": 3,
+          "y": 6,
+          "rotation": 0
+        },
+        {
+          "type": "S",
+          "x": 3,
+          "y": 6,
+          "rotation": 2
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "ROTATE_CCW",
+        "RIGHT",
+        "RIGHT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "S",
+        "x": 7,
+        "y": 17,
+        "rotation": 3
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        128
+      ],
+      "cleared": 2
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        639,
+        767
+      ],
+      "current": {
+        "type": "S",
+        "x": 4,
+        "y": 16,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "J",
+        "T",
+        "J",
+        "Z"
+      ],
+      "hold": "T",
+      "canHold": true,
+      "lines": 6,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "S",
+          "x": 4,
+          "y": 16,
+          "rotation": 0
+        },
+        {
+          "type": "S",
+          "x": 4,
+          "y": 16,
+          "rotation": 2
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP"
+    ],
+    "error": "실행 전 SOFT_DROP 충돌을 발견했습니다."
+  },
+  {
+    "caseId": "log-onebased198",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        783,
+        927,
+        895,
+        895,
+        895,
+        895
+      ],
+      "current": {
+        "type": "O",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "I",
+        "T",
+        "L",
+        "Z",
+        "L"
+      ],
+      "hold": "J",
+      "canHold": false,
+      "lines": 11,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "O",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "O",
+        "x": 5,
+        "y": 14,
+        "rotation": 0
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        879,
+        895,
+        895,
+        895,
+        895
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        879,
+        895,
+        895,
+        895,
+        895,
+        767,
+        767,
+        767,
+        767
+      ],
+      "current": {
+        "type": "I",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "T",
+        "L",
+        "Z",
+        "L",
+        "T"
+      ],
+      "hold": "J",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "I",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        },
+        {
+          "type": "I",
+          "x": 3,
+          "y": 1,
+          "rotation": 2
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  },
+  {
+    "caseId": "log-onebased199",
+    "kind": "gravity",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        879,
+        895,
+        895,
+        895,
+        895,
+        767,
+        767,
+        767,
+        767
+      ],
+      "current": {
+        "type": "I",
+        "x": 3,
+        "y": 3,
+        "rotation": 0
+      },
+      "next": [
+        "T",
+        "L",
+        "Z",
+        "L",
+        "T"
+      ],
+      "hold": "J",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 1,
+      "rotationCandidates": [
+        {
+          "type": "I",
+          "x": 3,
+          "y": 3,
+          "rotation": 0
+        },
+        {
+          "type": "I",
+          "x": 3,
+          "y": 3,
+          "rotation": 2
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "ROTATE_CCW",
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "I",
+        "x": 7,
+        "y": 12,
+        "rotation": 3
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        879,
+        767,
+        767,
+        767,
+        767
+      ],
+      "cleared": 4
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        879,
+        895,
+        895,
+        895,
+        895,
+        767,
+        767,
+        767,
+        767
+      ],
+      "current": {
+        "type": "I",
+        "x": 3,
+        "y": 10,
+        "rotation": 0
+      },
+      "next": [
+        "T",
+        "L",
+        "Z",
+        "L",
+        "T"
+      ],
+      "hold": "J",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 6,
+      "rotationCandidates": [
+        {
+          "type": "I",
+          "x": 3,
+          "y": 10,
+          "rotation": 0
+        },
+        {
+          "type": "I",
+          "x": 3,
+          "y": 10,
+          "rotation": 2
+        }
+      ]
+    },
+    "actions": [
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "SOFT_DROP"
+    ],
+    "error": "실행 전 SOFT_DROP 충돌을 발견했습니다."
+  },
+  {
+    "caseId": "log-onebased202",
+    "kind": "movement-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        2,
+        2,
+        127,
+        879,
+        895,
+        895,
+        895,
+        895,
+        767,
+        767,
+        767,
+        767,
+        1019,
+        1022,
+        1022,
+        1022,
+        1022,
+        1022
+      ],
+      "current": {
+        "type": "L",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "L",
+        "T",
+        "S",
+        "J"
+      ],
+      "hold": "T",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 1,
+      "rotationCandidates": [
+        {
+          "type": "L",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "ROTATE_CW",
+        "ROTATE_CW",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "L",
+        "x": 7,
+        "y": 4,
+        "rotation": 2
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        1007,
+        895,
+        895,
+        895,
+        895,
+        767,
+        767,
+        767,
+        767,
+        1019,
+        1022,
+        1022,
+        1022,
+        1022,
+        1022
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        0,
+        2,
+        2,
+        127,
+        879,
+        895,
+        895,
+        895,
+        895,
+        767,
+        767,
+        767,
+        767,
+        1019,
+        1022,
+        1022,
+        1022,
+        1022,
+        1022,
+        1007
+      ],
+      "current": {
+        "type": "L",
+        "x": 5,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "L",
+        "T",
+        "S",
+        "J"
+      ],
+      "hold": "T",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "L",
+          "x": 5,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT"
+    ],
+    "error": "이동 확인 중 보드·큐가 변경되었습니다."
+  },
+  {
+    "caseId": "log-1792725492925-onebased38",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        259,
+        511,
+        511,
+        959,
+        959,
+        959,
+        959
+      ],
+      "current": {
+        "type": "I",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "J",
+        "O",
+        "S",
+        "T"
+      ],
+      "hold": "L",
+      "canHold": false,
+      "lines": 10,
+      "incoming": 1,
+      "rotationCandidates": [
+        {
+          "type": "I",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "ROTATE_CW",
+        "RIGHT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "I",
+        "x": 9,
+        "y": 12,
+        "rotation": 1
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        512,
+        771,
+        959,
+        959,
+        959,
+        959
+      ],
+      "cleared": 2
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        512,
+        771,
+        959,
+        959,
+        959,
+        959,
+        767,
+        767,
+        767,
+        767
+      ],
+      "current": {
+        "type": "Z",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "J",
+        "O",
+        "S",
+        "T",
+        "J"
+      ],
+      "hold": "L",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 2,
+      "rotationCandidates": [
+        {
+          "type": "Z",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        },
+        {
+          "type": "Z",
+          "x": 3,
+          "y": 1,
+          "rotation": 2
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "ROTATE_CW",
+      "RIGHT",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  },
+  {
+    "caseId": "log-1792725492925-onebased43",
+    "kind": "gravity",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        131,
+        231,
+        125,
+        767,
+        959,
+        767,
+        767,
+        767,
+        767,
+        1019,
+        1021,
+        1007,
+        1007,
+        1007,
+        991,
+        991
+      ],
+      "current": {
+        "type": "T",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "Z",
+        "O",
+        "S",
+        "J",
+        "L"
+      ],
+      "hold": "J",
+      "canHold": true,
+      "lines": 16,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "T",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "ROTATE_CCW",
+        "RIGHT",
+        "SOFT_DROP",
+        "SOFT_DROP",
+        "ROTATE_CCW",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "T",
+        "x": 7,
+        "y": 6,
+        "rotation": 2
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        131,
+        231,
+        1021,
+        959,
+        767,
+        767,
+        767,
+        767,
+        1019,
+        1021,
+        1007,
+        1007,
+        1007,
+        991,
+        991
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        131,
+        231,
+        125,
+        767,
+        959,
+        767,
+        767,
+        767,
+        767,
+        1019,
+        1021,
+        1007,
+        1007,
+        1007,
+        991,
+        991
+      ],
+      "current": {
+        "type": "T",
+        "x": 8,
+        "y": 4,
+        "rotation": 3
+      },
+      "next": [
+        "Z",
+        "O",
+        "S",
+        "J",
+        "L"
+      ],
+      "hold": "J",
+      "canHold": true,
+      "lines": 16,
+      "incoming": 1,
+      "rotationCandidates": [
+        {
+          "type": "T",
+          "x": 8,
+          "y": 4,
+          "rotation": 3
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "SOFT_DROP",
+      "SOFT_DROP",
+      "ROTATE_CCW",
+      "RIGHT",
+      "SOFT_DROP"
+    ],
+    "error": "실행 전 SOFT_DROP 충돌을 발견했습니다."
+  },
+  {
+    "caseId": "log-1792725492925-onebased70",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        127,
+        255,
+        511,
+        1022,
+        1019,
+        1019,
+        1019,
+        1019
+      ],
+      "current": {
+        "type": "T",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "O",
+        "J",
+        "Z",
+        "I",
+        "O"
+      ],
+      "hold": "Z",
+      "canHold": true,
+      "lines": 7,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "T",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "ROTATE_CCW",
+        "RIGHT",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "T",
+        "x": 8,
+        "y": 12,
+        "rotation": 3
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        639,
+        1022,
+        1019,
+        1019,
+        1019,
+        1019
+      ],
+      "cleared": 2
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        639,
+        1022,
+        1019,
+        1019,
+        1019,
+        1019,
+        1021,
+        1021
+      ],
+      "current": {
+        "type": "O",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "J",
+        "Z",
+        "I",
+        "O",
+        "I"
+      ],
+      "hold": "Z",
+      "canHold": true,
+      "lines": 9,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "O",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        },
+        {
+          "type": "O",
+          "x": 3,
+          "y": 1,
+          "rotation": 1
+        },
+        {
+          "type": "O",
+          "x": 3,
+          "y": 1,
+          "rotation": 2
+        },
+        {
+          "type": "O",
+          "x": 3,
+          "y": 1,
+          "rotation": 3
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "ROTATE_CCW",
+      "RIGHT",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  },
+  {
+    "caseId": "log-1792725492925-onebased79",
+    "kind": "lock-rise",
+    "evidence": "user-provided-public-dom-record",
+    "before": {
+      "board": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        24,
+        185,
+        249,
+        511,
+        1019,
+        1019,
+        1019,
+        1019,
+        1021,
+        1021,
+        959,
+        959,
+        959
+      ],
+      "current": {
+        "type": "S",
+        "x": 3,
+        "y": 0,
+        "rotation": 0
+      },
+      "next": [
+        "L",
+        "T",
+        "Z",
+        "J",
+        "Z"
+      ],
+      "hold": "I",
+      "canHold": true,
+      "lines": 11,
+      "incoming": 5,
+      "rotationCandidates": [
+        {
+          "type": "S",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ]
+    },
+    "plan": {
+      "kind": "place",
+      "path": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "RIGHT",
+        "ROTATE_CW",
+        "HARD_DROP"
+      ],
+      "target": {
+        "type": "S",
+        "x": 8,
+        "y": 8,
+        "rotation": 1
+      },
+      "expectedBoard": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        24,
+        441,
+        1017,
+        1019,
+        1019,
+        1019,
+        1019,
+        1021,
+        1021,
+        959,
+        959,
+        959
+      ],
+      "cleared": 1
+    },
+    "after": {
+      "board": [
+        0,
+        0,
+        0,
+        24,
+        24,
+        441,
+        1017,
+        1019,
+        1019,
+        1019,
+        1019,
+        1021,
+        1021,
+        959,
+        959,
+        959,
+        991,
+        991,
+        991,
+        991
+      ],
+      "current": {
+        "type": "L",
+        "x": 3,
+        "y": 1,
+        "rotation": 0
+      },
+      "next": [
+        "T",
+        "Z",
+        "J",
+        "Z",
+        "J"
+      ],
+      "hold": "I",
+      "canHold": true,
+      "lines": 12,
+      "incoming": 0,
+      "rotationCandidates": [
+        {
+          "type": "L",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        }
+      ]
+    },
+    "actions": [
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "RIGHT",
+      "ROTATE_CW",
+      "HARD_DROP"
+    ],
+    "error": "처리 결과를 확인하지 못해 중지했습니다. 상태 점검·기록을 확인하세요. 비멱등 입력은 재전송하지 않았습니다."
+  }
+]
