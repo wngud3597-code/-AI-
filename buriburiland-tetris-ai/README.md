@@ -42,7 +42,7 @@ npm.cmd run replay -- reports/browser-evidence.jsonl
 npm.cmd start
 ~~~
 
-verify:source, test:browser, 데모는 원본 공개 JS 캐시 ../.cache/buriburiland-public-2026-10-23/847.a5a05f14ceb3f87d.js를 사용합니다. 이 작업 폴더에는 캐시가 있습니다. 다른 PC에서는 [고정 원본](https://buriburiland.com/_next/static/chunks/847.a5a05f14ceb3f87d.js)을 같은 위치에 저장해야 하며, SHA256이 다르면 검사를 중단합니다. 공개 사이트 코드와 React는 배포 userscript에 포함하지 않습니다.
+verify:source, test:browser, 데모는 원본 공개 JS 캐시 ../.cache/buriburiland-public-2026-10-23/847.a5a05f14ceb3f87d.js를 사용합니다. 이 작업 폴더에는 캐시가 있습니다. 다른 PC에서는 [고정 원본](https://buriburiland.com/_next/static/chunks/847.a5a05f14ceb3f87d.js)을 같은 위치에 저장해야 하며, SHA256이 다르면 검사를 중단합니다. 공개 사이트 코드와 React는 배포 userscript에 포함하지 않습니다..
 
 replays/synthetic-example.jsonl은 정상·의도한 불일치·취소를 포함한 예제입니다. 재생 시 불일치 1건을 검출하고 종료 코드 1을 반환하는 것이 정상입니다. replay는 before와 실제 기록 입력부터 다시 계산하며 저장된 expectedBoard를 정답으로 쓰지 않습니다. 타임스탬프 순서는 검사하지만 자연 중력·lock 시간·외생 가비지를 완전 재현하지는 않습니다.
 
